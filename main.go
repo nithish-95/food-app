@@ -14,6 +14,6 @@ func getRecipes(w http.ResponseWriter, r *http.Request) {
 func main() {
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)
-	r.Get("/", get)
+	r.Get("/", getRecipes)
 	http.ListenAndServe(":3000", r)
 }
